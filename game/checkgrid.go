@@ -1,5 +1,13 @@
 package tictactoe
 
+func isValidMove(i, j int, grid [][]string) bool {
+	if grid[i][j] == "" {
+		return true
+	} else {
+		return false
+	}
+}
+
 // Function to check if there is a win
 func isWin(grid [][]string, player string) bool {
 	// Check rows and columns
@@ -31,7 +39,7 @@ func isFull(grid [][]string) bool {
 	return true
 }
 
-func CheckGrid(grid [][]string, player string) string {
+func checkGrid(grid [][]string, player string) string {
 	switch {
 	case isWin(grid, player):
 		if player == "X" {
