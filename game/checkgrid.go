@@ -8,7 +8,6 @@ func isValidMove(i, j int, grid [][]string) bool {
 	}
 }
 
-// Function to check if there is a win
 func isWin(grid [][]string, player string) bool {
 	// Check rows and columns
 	for i := 0; i < 3; i++ {
@@ -45,7 +44,7 @@ func checkGrid(grid [][]string, player string) string {
 		if player == "X" {
 			return "You won!!"
 		} else {
-			return "You wo!!"
+			return "You lost!!"
 		}
 	case isFull(grid):
 		return "Drow!!"

@@ -23,7 +23,7 @@ func playGame() {
 			if player == "0" {
 				continue
 			} else {
-				fmt.Print("Invalid Move, Try Again: ")
+				fmt.Print("Invalid Move; ")
 				continue
 			}
 		}
@@ -31,15 +31,17 @@ func playGame() {
 		if player == "0" {
 			printGrid(grid)
 		}
-		player = switchPlayer(player)
 
 		gridStatus := checkGrid(grid, player)
 
 		if gridStatus != "cont" {
-			printGrid(grid)
+			if player == "X" {
+				printGrid(grid)
+			}
 			fmt.Println(gridStatus)
 			return
 		}
+		player = switchPlayer(player)
 	}
 }
 
